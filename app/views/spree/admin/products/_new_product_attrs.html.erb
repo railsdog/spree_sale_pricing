@@ -15,14 +15,6 @@
   <% end %>
 </div>
 
-<div data-hook="new_product_msrp" class="four columns">
-  <%= f.field_container :price do %>
-    <%= f.label :msrp, Spree.t(:msrp) %> <span class="required">*</span><br />
-    <%= f.text_field :msrp, :value => number_to_currency(@product.msrp, :unit => ''), :class => 'fullwidth' %>
-    <%= f.error_message_on :msrp %>
-  <% end %>
-</div>
-
 <div data-hook="new_product_price" class="four columns">
   <%= f.field_container :price do %>
     <%= f.label :price, Spree.t(:master_price) %> <span class="required">*</span><br />
